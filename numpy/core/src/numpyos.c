@@ -160,7 +160,7 @@ _ensure_decimal_point(char* buffer, size_t buf_size)
 static void
 _change_decimal_from_locale_to_dot(char* buffer)
 {
-    struct lconv *locale_data = localeconv();
+    //struct lconv *locale_data = localeconv();
     const char *decimal_point = "."; //locale_data->decimal_point;
 
     if (decimal_point[0] != '.' || decimal_point[1] != 0) {
@@ -419,7 +419,7 @@ NumPyOS_ascii_strncasecmp(const char* s1, const char* s2, size_t len)
 static double
 NumPyOS_ascii_strtod(const char *s, char** endptr)
 {
-    struct lconv *locale_data = localeconv();
+    //struct lconv *locale_data = localeconv();
     const char *decimal_point = "."; //locale_data->decimal_point;
     size_t decimal_point_len = strlen(decimal_point);
 
